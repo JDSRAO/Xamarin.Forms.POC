@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyXamlApp.EntryKeyboardTypesPage">
+  <StackLayout>
+    <StackLayout.Resources>
+      <ResourceDictionary>
+        <Style TargetType="Entry">
+          <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+        </Style>
+        <Style TargetType="Editor">
+          <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+        </Style>
+      </ResourceDictionary>
+    </StackLayout.Resources>
+    <Editor Text="{Binding Source ={x:Reference Name=textBox}, Path=Text }" />
+    <Entry Text="Default" Keyboard="Default" x:Name="textBox"/>
+    <Entry Text="Text" Keyboard="Text"/>
+    <Entry Text="Chat" Keyboard="Chat"/>
+    <Entry Text="Url" Keyboard="Url"/>
+    <Entry Text="Email" Keyboard="Email"/>
+    <Entry Text="Telephone" Keyboard="Telephone"/>
+    <Entry Text="Numeric" Keyboard="Numeric"/>
+    <DatePicker x:Name="datePicker"/>
+    <TimePicker/>
+  </StackLayout>
+  
+</ContentPage>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyXamlApp.Index"
+             Title="Index">
+  <!--Page level resources-->
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <!--Page level style settings-->
+      <Style TargetType="Button">
+        <Setter Property="TextColor" Value="Aqua"/>
+        <Setter Property="FontSize" Value="Large"/>
+        <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <ScrollView>
+  <StackLayout>    
+    <Button x:Name="BoxViewPage" Text="Box View Page" Clicked="OnIndexClicked" StyleId="BoxViewPage" />
+    <Button x:Name="ButtonLoggerPage" Text="Button Logger Page" Clicked="OnIndexClicked" StyleId="ButtonLoggerPage" />
+    <Button x:Name="EBookPage" Text="EBook Page" Clicked="OnIndexClicked" StyleId="EBookPage" />
+    <Button x:Name="FramedTextPage" Text="Framed Text Page" Clicked="OnIndexClicked" StyleId="FramedTextPage" />
+    <Button x:Name="GreetingsPage" Text="Greetings Page" Clicked="OnIndexClicked" StyleId="GreetingsPage"/>
+    <Button x:Name="MainPage" Text="Main Page" Clicked="OnIndexClicked" StyleId="MainPage"/>
+    <Button x:Name="TwobuttonPage" Text="Two button Page" Clicked="OnIndexClicked" StyleId="TwobuttonPage"/>
+    <Button x:Name="XamlClock" Text="XamlClock" Clicked="OnIndexClicked" StyleId="XamlClock"/>
+    <Button x:Name="XamlKeypad" Text="XamlKeypad" Clicked="OnIndexClicked" StyleId="XamlKeypad"/>
+    <Button x:Name="LoginPage" Text="Login Page" Clicked="OnIndexClicked" StyleId="LoginPage" Image="icon.png"/>
+    <Button x:Name="ControlsPage" Text="Controls Page" Clicked="OnIndexClicked" StyleId="ControlsPage" />
+    <Button x:Name="EntryKeyboardTypesPage" Text="Entry Keyboard Types Page" Clicked="OnIndexClicked" StyleId="EntryKeyboardTypesPage" />
+    <Button x:Name="GridViewPage" Text="GridView Page" Clicked="OnIndexClicked" StyleId="GridViewPage" />
+    <Button x:Name="ListViewPage" Text="ListViewPage Page" Clicked="OnIndexClicked" StyleId="ListViewPage" />
+  <Button x:Name="SchoolDetailsPage" Text="SchoolDetailsPage Page" Clicked="OnIndexClicked" StyleId="SchoolDetailsPage" />
+  <Button x:Name="StudentPage" Text="StudentPage Page" Clicked="OnIndexClicked" StyleId="StudentPage" />
+  </StackLayout>
+  </ScrollView>
+
+  <!--Top/Actionbar menu items-->
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Edit" Order="Primary">
+      <ToolbarItem.Icon>
+        <OnPlatform x:TypeArguments="FileImageSource"
+                    Android="icon.png"/>
+      </ToolbarItem.Icon>
+    </ToolbarItem>
+    <ToolbarItem Text="Explore" Order="Secondary" />
+  </ContentPage.ToolbarItems>
+</ContentPage>

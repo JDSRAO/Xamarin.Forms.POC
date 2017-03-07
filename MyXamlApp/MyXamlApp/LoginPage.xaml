@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MyXamlApp.ViewModels"
+             x:Class="MyXamlApp.LoginPage">
+  <!--ContentPage Resources-->
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <local:LoginPageViewModel x:Key="viewModel" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  
+  <!--<ContentPage Layout-->
+  <StackLayout>
+    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+      <StackLayout.Margin>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0, 25, 0, 0" Android="0,20,0,0" WinPhone="0,20,0,0" />
+      </StackLayout.Margin>
+    <Image Source="icon.png" />
+    </StackLayout>
+    <StackLayout VerticalOptions="CenterAndExpand" Padding="20,0,20,0" BindingContext="{StaticResource viewModel }">
+      <Entry Placeholder="Username" Keyboard="Email" Text="{Binding Username}" />
+      <Entry Placeholder="Password" IsPassword="True" Text="{Binding Password}"/>
+      <Button x:Name="Login" Text="Login" Command="{Binding LoginCommand}" />
+      <Picker Title="Remember Me?" x:Name="RememberMe"/>
+    </StackLayout>
+  </StackLayout>
+  
+  <!--Top/Actionbar menu items-->
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Edit" Order="Primary"/>
+  </ContentPage.ToolbarItems>
+</ContentPage>

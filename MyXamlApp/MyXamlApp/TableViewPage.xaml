@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyXamlApp.TableViewPage">
+  <StackLayout>
+    <TableView x:Name="tableView"
+               Intent="Form">
+      <TableView.BindingContext>
+        
+      </TableView.BindingContext>
+
+      <TableRoot>
+        <TableSection Title="Personal Information" >
+          <EntryCell Label="Name:"
+                     Text=""
+                     Placeholder="Enter name"/>
+        </TableSection>
+      </TableRoot>
+
+    </TableView>
+    <Button Text="Submit" />
+  </StackLayout>
+  
+</ContentPage>

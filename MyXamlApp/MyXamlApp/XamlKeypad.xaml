@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyXamlApp.XamlKeypad">
+  <StackLayout VerticalOptions="Center"
+               HorizontalOptions="Center">
+    <Label x:Name="lbl_result" FontSize="Large" HorizontalTextAlignment="Center"/>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="1" FontSize="Medium" TextColor="Black" BackgroundColor="Aqua" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" />
+      <Label Text="2" FontSize="Medium" TextColor="Black" BackgroundColor="Aqua" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand"/>
+      <Label Text="3" FontSize="Medium" TextColor="Black" BackgroundColor="Aqua" />
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="4" FontSize="Medium" TextColor="Black" BackgroundColor="Aqua" />
+      <Label Text="5" FontSize="Medium" TextColor="Black" BackgroundColor="Aqua" />
+      <Label Text="6" FontSize="Medium" TextColor="Black" BackgroundColor="Aqua" />
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="7" FontSize="Medium" TextColor="Black" BackgroundColor="Aqua" />
+      <Label Text="8" FontSize="Medium" TextColor="Black" BackgroundColor="Aqua" />
+      <Label Text="9" FontSize="Medium" TextColor="Black" BackgroundColor="Aqua" />
+    </StackLayout>
+      <Label Text="0" FontSize="Medium" HorizontalOptions="CenterAndExpand" />
+  </StackLayout>
+  <!--<Button HorizontalOptions="CenterAndExpand" Text="Result" Clicked="OnButtonClicked"/>-->
+  <Button x:Name="Result"  VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" Text="Result"/>
+</ContentPage>

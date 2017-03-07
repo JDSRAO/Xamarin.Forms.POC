@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyXamlApp.ListViewPage">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness" iOS="10, 20, 10, 0" Android="10, 0" WinPhone="10, 0" />
+  </ContentPage.Padding>
+  <!--<ListView x:Name="lstView" SeparatorVisibility="None" Header="{Binding School}">-->
+  <ListView x:Name="lstView" SeparatorVisibility="None" Header="Header" IsPullToRefreshEnabled="True">
+    <!--<ListView.HeaderTemplate>
+      <DataTemplate>
+        <Label Text="Header" FontSize="Large" FontAttributes="Bold, Italic" HorizontalTextAlignment="Center" />
+      </DataTemplate>
+    </ListView.HeaderTemplate>-->
+    <ListView.RowHeight>
+      <OnPlatform x:TypeArguments="x:Int32" iOS="80" Android="80" WinPhone="90" />
+    </ListView.RowHeight>
+    
+    <!--Static data template-->
+    <!--<ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <ContentView Padding="5">
+            <Frame OutlineColor="Black" Padding="5">
+              <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding Id}"/>
+                <StackLayout>
+                  <Label Text="{Binding Name}"/>
+                  <Label Text="{Binding Designation}"/>
+                  
+                </StackLayout>
+                <Entry Placeholder="HaHa"/>
+              </StackLayout>
+            </Frame>
+          </ContentView>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>-->
+    
+    <!--API Call Template-->
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <ContentView Padding="5">
+            <Frame OutlineColor="Black" Padding="5">
+              <StackLayout Orientation="Horizontal">
+                <Image Source="{Binding thumbnail}"/>
+                <StackLayout>
+                  <Label Text="{Binding title}"/>
+                  <Label Text="{Binding href}"/>
+                  <Label Text="{Binding ingredients}"/>
+                  <Label Text="{Binding thumbnail}"/>
+                </StackLayout>
+              </StackLayout>
+            </Frame>
+          </ContentView>
+          <ViewCell.ContextActions>
+            <MenuItem Text="Reset GPA" />
+            <MenuItem Text="Move to top" />
+            <MenuItem Text="Move to bottom" />
+            <MenuItem Text="Remove" IsDestructive="True" />
+          </ViewCell.ContextActions>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+    
+  </ListView>
+  
+</ContentPage>
